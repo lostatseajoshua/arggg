@@ -14,4 +14,11 @@ public struct CommandLineArgument: Hashable {
     public var hashValue: Int {
         return name.hashValue
     }
+
+    public init(name: String, options: Set<String>? = nil, parameters: Set<String>, required: Bool = false) {
+        self.name = name
+        self.options = options
+        self.parameters = parameters
+        self.required = required
+    }
 }
