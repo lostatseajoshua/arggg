@@ -5,6 +5,11 @@ import PackageDescription
 
 let package = Package(
     name: "Arguments",
+    products:[
+        .library(name: "Arguments", targets: ["Arguments"]),
+        .library(name: "ArgumentsStatic", type: .static, targets: ["Arguments"]),
+        .library(name: "ArgumentsDynamic", type: .dynamic, targets: ["Arguments"]),
+    ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
