@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Arguments {
-    // MARK: - Static Properties
+public struct Arguments {
+    // MARK: - Static Properties (Public, Private)
 
-    static let helpArg = CommandLineArgument(name: "Help", options:nil, parameters: ["--help", "-help", "--h", "-h", "help", "h"], required: false)
+    public static let helpArg = CommandLineArgument(name: "Help", options:nil, parameters: ["--help", "-help", "--h", "-h", "help", "h"], required: false)
 
     // MARK: - Public Properties
 
@@ -23,7 +23,7 @@ struct Arguments {
 
     // MARK: - Init
 
-    init(arguments: Set<CommandLineArgument>) {
+    public init(arguments: Set<CommandLineArgument>) {
         var argsMap = [String: CommandLineArgument]()
         var reqArgs = Set<CommandLineArgument>()
 
